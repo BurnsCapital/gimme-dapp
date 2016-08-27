@@ -1,0 +1,51 @@
+<h2 class="page-header">Gimme dApp!</h2>
+{{#if errors}}
+  {{#each errors}}
+  <div class="alert alert-danger">{{msg}}</div>
+  {{/each}}
+{{/if}}
+
+<form method="post" action="/submit">
+  <div class="form-group">
+    <label>Name your dApp</label>
+    <input type ="text" class="form-control" placeholder="What is the name of your dapp?" name = "dappname">
+  </div>
+<div class="form-group">
+  <label>Development Team</label>
+  <input type ="text" class="form-control" placeholder="Best group ever!" name = "devteam">
+</div>
+<div class="form-group">
+  <label>Tell us about is:</label>
+  <input type ="memo" class="form-control" placeholder="Keep it short!" name = "shortdesc">
+</div>
+<div class="form-group">
+  <label>Donation address</label>
+  <input type ="text" class="form-control" placeholder="Where can we send ether?" name = "donateaddr">
+</div>
+<div class="form-group">
+  <label>Category</label>
+  <input type ="text" class="form-control" placeholder="What can we do with it?" name = "Category">
+</div>
+<div class="form-group">
+  <label>Status</label>
+  <select name="statusx" font-color = black>
+    <option value="released">Released</option>
+    <option value="betaTesting">Beta Testing</option>
+    <option value="alphaTesting">Alpha Testing</option>
+    <option value="demo">Demo</option>
+    <option value="idea">Idea</option>
+    <option value="onHold">On Hold</option>
+    <option value="cancelled">Cancelled</option>
+</select>
+</div>
+<div class="form-group">
+  <label>DApp Website</label>
+  <input type ="text" class="form-control" placeholder="Where to find out more?" name = "dappwebsite">
+</div>
+<div class="form-group">
+  <label>Projected Release Date</label>
+  <input type ="text" class="form-control" placeholder="Where to find out more?" name = "dappwebsite">
+</div>
+<button type="submit" class="btn btn-default">Submit</button>
+<button type="cancel" class="btn btn-default">Cancel</button>
+</form>
