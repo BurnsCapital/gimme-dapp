@@ -13,6 +13,106 @@ nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
       if user
         ul.nav.navbar-nav
 
+          li.dropdown(class=url=='/categorySelector'?'active':undefined)
+            a.dropdown-toggle(href='#', data-toggle='dropdown')
+              i.fa.fa-fw.fa-laptop
+              | &nbsp;Category &nbsp;
+              b.caret
+            ul.dropdown-menu
+              li
+                a(href='/dapps/Category#Banking')
+                  i.fa.fa-fw.fa-money
+                  | &nbsp;Banking
+              li
+                a(href='/dapps/Category#Business')
+                  i.fa.fa-fw.fa-briefcase
+                  | &nbsp;Business
+              li
+                a(href='/dapps/Category#Communication')
+                  i.fa.fa-fw.fa-mobile-phone
+                  | &nbsp;Communication
+              li
+                a(href='/dapps/Category#ConsumerCredit')
+                  i.fa.fa-fw.fa-money
+                  | &nbsp;Consumer Credit and Lending
+              li
+                a(href='/dapps/Category#Eduication')
+                  i.fa.fa-fw.fa-graduation-cap
+                  | &nbsp;Education
+              li
+                a(href='/dapps/Category#Entertainment')
+                  i.fa.fa-fw.fa-square
+                  | &nbsp;Entertainment
+              li
+                a(href='/dapps/Category#Games')
+                  i.fa.fa-fw.fa-gamepad
+                  | &nbsp;Games
+              li
+                a(href='/dapps/Category#fintech')
+                  i.fa.fa-fw.fa-bank
+                  | &nbsp;Fintech
+              li
+                a(href='/dapps/Category#Health')
+                  i.fa.fa-fw.fa-heart
+                  | &nbsp;Health and Fitness
+              li
+                a(href='/dapps/Category#Identification')
+                  i.fa.fa-fw.fa-group
+                  | &nbsp;Identification
+              li
+                a(href='/dapps/Category#MTR')
+                  i.fa.fa-fw.fa-money
+                  | &nbsp;Money Transfer & remittance
+              li
+                a(href='/dapps/Category#Oracle')
+                  i.fa.fa-fw.fa-eye
+                  | &nbsp;Oracle
+              li
+                a(href='/dapps/Category#Productivity')
+                  i.fa.fa-fw.fa-laptop
+                  | &nbsp;Producivity
+              li
+                a(href='/dapps/Category#Shopping')
+                  i.fa.fa-fw.fa-shopping-cart
+                  | &nbsp;Shopping
+              li
+                a(href='/dapps/Category#Social')
+                  i.fa.fa-fw.fa-group
+                  | &nbsp;Social
+              li
+                a(href='/dapps/Category#Sports')
+                  i.fa.fa-fw.fa-futbol-o
+                  | &nbsp;Sports
+              li
+                a(href='/dapps/Category#Tools')
+                  i.fa.fa-fw.fa-gears
+                  | &nbsp;Tools
+              li
+                a(href='/dapps/Category#Transportation')
+                  i.fa.fa-fw.fa-taxi
+                  | &nbsp;Transportation
+              li
+                a(href='/dapps/Category#Travel')
+                  i.fa.fa-fw.fa-plane
+                  | &nbsp;Travel
+              li
+                a(href='/dapps/Category#Verification')
+                  i.fa.fa-fw.fa-group
+                  | &nbsp;Verification
+              li
+                a(href='/dapps/Category#Wallet')
+                  i.fa.fa-fw.fa-credit-card
+                  | &nbsp;Wallet
+              li
+                a(href='/dapps/Category#Weather')
+                  i.fa.fa-fw.fa-cloud
+                  | &nbsp;Weather
+              li
+                a(href='/dapps/Category#Other')
+                  i.fa.fa-fw.fa-question
+                  | &nbsp;Other
+
+
           li.dropdown(class=url=='/apiopen'?'active':undefined)
             a.dropdown-toggle(href='#', data-toggle='dropdown')
               i.fa.fa-fw.fa-laptop

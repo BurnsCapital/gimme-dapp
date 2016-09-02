@@ -6,7 +6,7 @@
 
 var User          = require('../models/User');
 var passportConf  = require('../config/passport');
-
+var devDapp       = require('../models/Users')
 /**
  * Admin Pages Controller
  */

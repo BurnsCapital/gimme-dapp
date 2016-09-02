@@ -1,31 +1,28 @@
 {
   "private": true,
-  "version": "1.0.0-65",
-  "name": "Skeleton",
-  "company": "Skeleton, Inc.",
-  "subdomain": "skeleton-app",
-  "description": "A friendly node and express framework",
-  "author": "Dan Stroot",
+  "version": "1.0.0",
+  "name": "GimmeDapp",
+  "company": "Gimme Dapp",
+  "subdomain": "gimmedapp-app",
+  "description": "A social platform for decentralized application development",
+  "author": "Cody Burns",
   "keywords": [
-    "skeleton",
-    "node",
-    "express",
-    "passport",
-    "bootstrap",
-    "fontawesome",
-    "framework"
+    "gimmedapp",
+    "dapp",
+    "ethereum classic",
+    "ETC"
   ],
-  "homepage": "http://skeleton-app.jit.su",
+  "homepage": "http://gimmiedapp.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dstroot/skeleton.git"
+    "url": "https://github.com/realcodywburns/gimmedapp.git"
   },
-  "bugs": "https://github.com/dstroot/skeleton/issues",
-  "contributors": "https://github.com/dstroot/skeleton/graphs/contributors",
+  "bugs": "https://github.com/realcodywburns/gimmedapp/issues",
+  "contributors": "https://github.com/realcodywburns/gimmedapp/graphs/contributors",
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://raw.github.com/dstroot/skeleton/master/LICENSE"
+      "url": "https://raw.github.com/realcodywburns/gimmedapp/master/LICENSE"
     }
   ],
   "scripts": {
@@ -48,14 +45,15 @@
     "errorhandler": "^1.4.2",
     "express": "^4.13.3",
     "express-flash": "~0.0.2",
+    "express-handlebars": "^3.0.0",
     "express-loggly": "~0.0.5",
     "express-session": "^1.11.3",
     "express-sslify": "~0.1.1",
     "express-validator": "^2.17.1",
     "fbgraph": "^1.1.0",
     "github-api": "~0.10.4",
+    "jade": "*",
     "helmet": "^0.10.0",
-    "jade": "^1.11.0",
     "lastfm": "~0.9.2",
     "lodash": "^3.10.1",
     "method-override": "^2.3.5",
