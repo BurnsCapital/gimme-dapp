@@ -59,8 +59,6 @@ block content
                 th.hidden-xs Email
                 th.hidden-xs Date Established
                 th Last Active
-                th Account Type
-                th Is Admin?
                 th Delete?
               tbody
           //- /USER LIST
@@ -74,18 +72,6 @@ block content
           .modal-header
             button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
             h4#myModalLabel.modal-title Delete confirmation
-          .modal-body
-            h4 Are you sure?
-          .modal-footer
-            button.btn.btn-default(type='button', data-dismiss='modal') No
-            button#yes.btn.btn-primary(type='button') Yes!
-
-#myModalUser.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalUserLabel', aria-hidden='true')
-      .modal-dialog.modal-sm
-        .modal-content
-          .modal-header
-            button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-            h4#myModalUserLabel.modal-title Type change confirmation
           .modal-body
             h4 Are you sure?
           .modal-footer
@@ -127,8 +113,6 @@ block scripts
       // Delete User link click
       $('#userList table tbody').on('click', 'td a.linkdeleteuser', deleteUser);
 
-      // Change account type
-      $('#userList table tbody').on('click', 'td a.linkchangeusertype', changeUserType);
     });
 
     // Functions =============================================================
@@ -152,8 +136,6 @@ block scripts
           tableContent += '<td class="hidden-xs"><a href="mailto:' + this.email + '">' + this.email + '</a></td>';
           tableContent += '<td class="hidden-xs">' + moment(this.activity.date_established).format('MMMM Do YYYY') + '</td>';
           tableContent += '<td>' + moment(this.activity.last_logon).fromNow() + '</td>';
-          tableContent += '<td>' + this.type + '</td>';
-          tableContent += '<td><a href="#" class="linkchangeusertype btn btn-danger btn-xs" rel="' + this._id + '">Make Admin?</a></td>';
           tableContent += '<td><a href="#" class="linkdeleteuser btn btn-danger btn-xs" rel="' + this._id + '">Danger!</a></td>';
         });
 
@@ -231,48 +213,4 @@ block scripts
       showmodal($(this).attr('rel'));
 
     };
-    // Change User Type
-    function changeUserType(event) {
 
-      // Prevent Link from Firing
-      event.preventDefault();
-
-      // Pop up a confirmation dialog
-      // Convoluted because we have to
-      // pass the user's id through
-      function showmodal(userid) {
-        // show modal
-        $('#myModalUser').modal({keyboard:true,backdrop:'static'});
-        // if "yes" clicked
-        $('#yes').on('click', function () {
-          // do our type change
-          if (this.type == "admin"){
-            var chtype = {"type" :"user"};
-            } else{
-            var chtype = { "type" :"admin"}};
-          $.ajax({
-            type: 'GET',
-            //- headers: { 'X-CSRF-Token': '#{token}' },
-            headers: { 'X-CSRF-Token': $('meta[name="x-csrf-token"]').attr('content')},
-            data : JSON.stringify(chtype),
-            url: '/accountlist/' + userid
-
-          }).done(function( response ) {
-            // Check for a successful (blank) response
-            if (response.msg === '') {
-            }
-            else {
-              alert('Error: ' + response.msg);
-            }
-            // Update the table
-            populateTable();
-          });
-          // close the modal
-          $('#myModalUser').modal('hide');
-        });
-      }
-
-      // call modal function with the user's account id
-      showmodal($(this).attr('rel'));
-
-    };

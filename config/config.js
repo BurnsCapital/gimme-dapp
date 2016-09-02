@@ -97,11 +97,11 @@ config.loginAttempts.expires   = '20m';
 // Who are we sending email as?
 config.smtp                    = {};
 config.smtp.name               = process.env.SMTP_FROM_NAME    || 'support';
-config.smtp.address            = process.env.SMTP_FROM_ADDRESS || 'support@gimmedapp.com';
+config.smtp.address            = process.env.SMTP_FROM_ADDRESS || 'support@skeleton.com';
 
 // How are we sending it?
 config.gmail                   = {};
-config.gmail.user              = process.env.SMTP_USERNAME || 'cody.w.burns@gmail.com';
+config.gmail.user              = process.env.SMTP_USERNAME || 'you@gmail.com';
 config.gmail.password          = process.env.SMTP_PASSWORD || 'appspecificpassword';
 
 /**
